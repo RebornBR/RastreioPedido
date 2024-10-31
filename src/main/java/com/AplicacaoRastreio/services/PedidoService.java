@@ -285,7 +285,7 @@ public class PedidoService {
     public ResponseEntity<InputStreamResource> baixarArquivo(String nomeArquivo, String senhaDeAcesso) throws FileNotFoundException {
         verificarCampo(senhaDeAcesso);
         validarAcesso(senhaDeAcesso);
-        String filePath = "AplicacaoRastreio\\src\\main\\resources\\relatorios\\"+nomeArquivo+".pdf";
+        String filePath = "src\\main\\resources\\relatorios\\"+nomeArquivo+".pdf";
         File file = new File(filePath);
         InputStreamResource resource = new InputStreamResource(new FileInputStream(file));
         return ResponseEntity.ok()

@@ -34,7 +34,7 @@ public class Relatorio implements RelatorioI {
         this.nomeRelatorio = nomeRelatorio;
         this.documentPdf = new Document();
         try {
-            PdfWriter.getInstance(this.documentPdf,new FileOutputStream("src\\main\\resources\\relatorios\\" + this.nomeArquivo));
+            PdfWriter.getInstance(this.documentPdf,new FileOutputStream("AplicacaoRastreio\\src\\main\\resources\\relatorios\\" + this.nomeArquivo));
             documentPdf.open();
             gerarCabecalho();
             gerarCorpo();
@@ -56,7 +56,7 @@ public class Relatorio implements RelatorioI {
         this.nomeRelatorio = nomeRelatorio;
         this.documentPdf = new Document();
         try {
-            PdfWriter.getInstance(this.documentPdf,new FileOutputStream("src\\main\\resources\\relatorios\\" + this.nomeArquivo));
+            PdfWriter.getInstance(this.documentPdf,new FileOutputStream("AplicacaoRastreio\\src\\main\\resources\\relatorios\\" + this.nomeArquivo));
             documentPdf.open();
             gerarCabecalho();
             for (Pedido p : pedidos){
